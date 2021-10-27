@@ -17,14 +17,13 @@ public class SisobraClient extends WebServiceGatewaySupport {
 
     private static final Logger log = LoggerFactory.getLogger(SisobraClient.class);
 
-    public RecepcaoDSMResponse getCountry(String country) {
+    public RecepcaoDSMResponse getRecepcaoResponse(String xml) {
 
         RecepcaoDSM request = new RecepcaoDSM();
-        //request.setName(country);
 
-        request.setXmlEntrada("<xml></xml>");
+        request.setXmlEntrada(xml);
 
-        log.info("Requesting location for " + country);
+        log.info("Requesting location for " + xml);
 
         RecepcaoDSMResponse response = (RecepcaoDSMResponse) getWebServiceTemplate()
                 .marshalSendAndReceive("https://sisobrapref.receita.economia.gov.br/sisobraprefWS/recepcao", request);
@@ -35,7 +34,6 @@ public class SisobraClient extends WebServiceGatewaySupport {
 
     public RecepcaoDSMResponse getRecepcaoResponse(){
         RecepcaoDSM request = new RecepcaoDSM();
-        //request.setName(country);
 
         request.setXmlEntrada("<xml></xml>");
 

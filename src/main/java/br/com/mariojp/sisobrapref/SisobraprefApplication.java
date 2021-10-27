@@ -58,14 +58,8 @@ public class SisobraprefApplication {
                     return true;
                 }
             };
-            // All hosts will be valid
             HttpsURLConnection.setDefaultHostnameVerifier(validHosts);
-            String country = "Spain";
 
-            if (args.length > 0) {
-                country = args[0];
-            }
-//            RecepcaoDSMResponse response = sisobraClient.getCountry("");
             RecepcaoDSMResponse response = sisobraClient.getRecepcaoResponse();
 
             System.err.println(response.getXmlResultado().toString());
