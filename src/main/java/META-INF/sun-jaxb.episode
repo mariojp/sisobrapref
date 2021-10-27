@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+      
+    <!--
+
+Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.3.0 
+Consulte <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+Gerado em: 2021.10.18 às 06:47:39 PM BRT 
+
+  -->
+      
+    <bindings xmlns:tns="http://webservice.ejb.sisobrapref.serpro.gov.br/" if-exists="true" scd="x-schema::tns">
+            
+        <schemaBindings map="false">
+                  
+            <package name="br.com.mariojp.sisobrapref.clientws.wsdl"/>
+                
+        </schemaBindings>
+            
+        <bindings if-exists="true" scd="~tns:consultarDocumento">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.ConsultarDocumento"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:consultarDocumentoResponse">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.ConsultarDocumentoResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:recepcaoDSM">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.RecepcaoDSM"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:recepcaoDSMResponse">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.RecepcaoDSMResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:recepcaoLote">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.RecepcaoLote"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:recepcaoLoteResponse">
+                  
+            <class ref="br.com.mariojp.sisobrapref.clientws.wsdl.RecepcaoLoteResponse"/>
+                
+        </bindings>
+          
+    </bindings>
+    
+</bindings>

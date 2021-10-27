@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.ejb.sisobrapref.serpro.gov.br/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="RecepcaoLoteWSImplService" targetNamespace="http://webservice.ejb.sisobrapref.serpro.gov.br/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.ejb.sisobrapref.serpro.gov.br/" elementFormDefault="unqualified" targetNamespace="http://webservice.ejb.sisobrapref.serpro.gov.br/" version="1.0">
+
+  <xs:element name="consultarDocumento" type="tns:consultarDocumento"/>
+
+  <xs:element name="consultarDocumentoResponse" type="tns:consultarDocumentoResponse"/>
+
+  <xs:element name="recepcaoDSM" type="tns:recepcaoDSM"/>
+
+  <xs:element name="recepcaoDSMResponse" type="tns:recepcaoDSMResponse"/>
+
+  <xs:element name="recepcaoLote" type="tns:recepcaoLote"/>
+
+  <xs:element name="recepcaoLoteResponse" type="tns:recepcaoLoteResponse"/>
+
+  <xs:complexType name="recepcaoLote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlEntrada" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recepcaoLoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlResultado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recepcaoDSM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlEntrada" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recepcaoDSMResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlResultado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultarDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlEntrada" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultarDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="xmlResultado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="recepcaoLoteResponse">
+    <wsdl:part element="tns:recepcaoLoteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarDocumentoResponse">
+    <wsdl:part element="tns:consultarDocumentoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recepcaoLote">
+    <wsdl:part element="tns:recepcaoLote" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recepcaoDSM">
+    <wsdl:part element="tns:recepcaoDSM" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recepcaoDSMResponse">
+    <wsdl:part element="tns:recepcaoDSMResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarDocumento">
+    <wsdl:part element="tns:consultarDocumento" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RecepcaoLoteWS">
+    <wsdl:operation name="recepcaoLote">
+      <wsdl:input message="tns:recepcaoLote" name="recepcaoLote">
+    </wsdl:input>
+      <wsdl:output message="tns:recepcaoLoteResponse" name="recepcaoLoteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recepcaoDSM">
+      <wsdl:input message="tns:recepcaoDSM" name="recepcaoDSM">
+    </wsdl:input>
+      <wsdl:output message="tns:recepcaoDSMResponse" name="recepcaoDSMResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDocumento">
+      <wsdl:input message="tns:consultarDocumento" name="consultarDocumento">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarDocumentoResponse" name="consultarDocumentoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RecepcaoLoteWSImplServiceSoapBinding" type="tns:RecepcaoLoteWS">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="recepcaoLote">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="recepcaoLote">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="recepcaoLoteResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recepcaoDSM">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="recepcaoDSM">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="recepcaoDSMResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDocumento">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarDocumento">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarDocumentoResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecepcaoLoteWSImplService">
+    <wsdl:port binding="tns:RecepcaoLoteWSImplServiceSoapBinding" name="RecepcaoPortType">
+      <soap12:address location="https://sisobrapref.receita.economia.gov.br/sisobraprefWS/recepcao"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
